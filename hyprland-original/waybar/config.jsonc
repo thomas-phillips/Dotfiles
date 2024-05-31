@@ -1,0 +1,121 @@
+{
+	"position": "top",
+	"layer": "top",
+	"height": 10,
+	"margin-top": 0,
+	"margin-bottom": 0,
+	"margin-left": 0,
+	"margin-right": 0,
+	"modules-left": [
+		"custom/launcher",
+		"hyprland/workspaces",
+		"custom/playerctl"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"battery",
+		"memory",
+		"cpu",
+		"network",
+		"tray",
+		"custom/powermenu"
+	],
+	"custom/launcher": {
+		"format": "󰣇",
+//		"on-click": "rofi -show drun",
+		"tooltip-format": "uname -r",
+		"tooltip": false
+	},
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+	},
+	"custom/playerctl": {
+		"format": "{icon}",
+		"return-type": "json",
+		"max-length": 64,
+		"exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+		"on-click-middle": "playerctl play-pause",
+		"on-click": "playerctl previous",
+		"on-click-right": "playerctl next",
+		"format-icons": {
+			"Playing": "<span>󰒮 󰏥 󰒭</span>",
+			"Paused": "<span>󰒮 󰐌 󰒭</span>"
+		}
+	},
+	"clock": {
+		"format": " {:%I:%M %p  %A  %b  %d}",
+		"tooltip": true,
+		"tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": "󰝟",
+		"format-icons": {
+			"default": [
+				"󰕿",
+				"󰖀",
+				"󰕾"
+			]
+		},
+		"on-click": "bash ~/.scripts/volume mute",
+		"on-scroll-up": "bash ~/.scripts/volume up",
+		"on-scroll-down": "bash ~/.scripts/volume down",
+		"scroll-step": 5,
+		"on-click-right": "pavucontrol"
+	},
+	"battery": {
+		"states": {
+		    // "good": 95,
+		    "warning": 30,
+		    "critical": 15
+		},
+		"format": "BAT:{capacity}%",
+		"format-charging": "CHR:{capacity}%",
+		"format-plugged": "PLG:{capacity}%",
+		"format-alt": "{time} {icon}"
+		// "format-good": "", // An empty format will hide the module
+		// "format-full": "",
+		//"format-icons": ["", "", "", "", ""]
+    },
+	"memory": {
+		"interval": 1,
+		"format": "MEM:{percentage}%",
+		"states": {
+			"warning": 85
+		}
+	},
+	"cpu": {
+		"interval": 1,
+		"format": "CPU:{usage}%"
+	},
+	"network": {
+		"format-wifi": "󰤨",
+		"format-ethernet": "󰈀 {ifname}",
+		"format-linked": "󰈀 {ifname} (No IP)",
+		"format-disconnected": "󰤭",
+		"format-alt": "󰈀 {ifname}: {ipaddr}/{cidr}",
+		"tooltip-format": "{essid}",
+		"on-click-right": "nm-connection-editor"
+	},
+	"custom/powermenu" : {
+		"format" : "",
+		"tooltip": false
+	}
+}
