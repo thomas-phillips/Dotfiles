@@ -1,7 +1,6 @@
 * {
     border: none;
     border-radius: 0px;
-    /*font-family: VictorMono, Iosevka Nerd Font, Noto Sans CJK;*/
     font-family: Hack, Iosevka, FontAwesome, Noto Sans CJK;
     font-size: 15px;
     font-style: normal;
@@ -26,7 +25,6 @@ window#waybar {
     margin: 5px 0px 0px 0px;
     padding: 0px 10px 0px 5px;
     border-radius: 0px 16px 16px 0px;
-    /* border: solid 0px #7e9aa6; */
     font-weight: normal;
     font-style: normal;
 }
@@ -40,7 +38,6 @@ window#waybar {
 
 #workspaces button.active {
     color: #ffffff;
-    /* background-color: transparent; */
     border-radius: 16px;
 }
 
@@ -48,7 +45,6 @@ window#waybar {
     background-color: #ffffff;
     color: black;
     border-radius: 20px;
-    /* padding: 0px 5px 0px 5px; */
 }
 
 #custom-playerctl {
@@ -90,13 +86,6 @@ window#waybar {
     font-style: normal;
 }
 
-/*#pulseaudio.muted {*/
-/*    background: transparent;*/
-/*    color: #7e9aa6;*/
-/*    border-radius: 8px;*/
-/*    margin-left: 0px;*/
-/*}*/
-
 #battery {
     color: #7e9aa6;
     margin: 5px 0px 0px 0px;
@@ -131,7 +120,6 @@ window#waybar {
     padding: 0px 5px 0px 5px;
 }
 
-
 #tray {
     background: #001119;
     margin: 5px 0px 0px 0px;
@@ -146,3 +134,4 @@ window#waybar {
     border-radius: 0px 16px 16px 0px;
     margin: 5px 5px 0px 0px;
 }
+

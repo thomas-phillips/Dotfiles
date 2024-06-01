@@ -25,7 +25,6 @@
 	],
 	"custom/launcher": {
 		"format": "󰣇",
-//		"on-click": "rofi -show drun",
 		"tooltip-format": "uname -r",
 		"tooltip": false
 	},
@@ -74,15 +73,12 @@
 				"󰕾"
 			]
 		},
-		"on-click": "bash ~/.scripts/volume mute",
-		"on-scroll-up": "bash ~/.scripts/volume up",
-		"on-scroll-down": "bash ~/.scripts/volume down",
 		"scroll-step": 5,
 		"on-click-right": "pavucontrol"
 	},
 	"battery": {
 		"states": {
-		    // "good": 95,
+		    "good": 95,
 		    "warning": 30,
 		    "critical": 15
 		},
@@ -90,9 +86,6 @@
 		"format-charging": "CHR:{capacity}%",
 		"format-plugged": "PLG:{capacity}%",
 		"format-alt": "{time} {icon}"
-		// "format-good": "", // An empty format will hide the module
-		// "format-full": "",
-		//"format-icons": ["", "", "", "", ""]
     },
 	"memory": {
 		"interval": 1,
