@@ -1,33 +1,65 @@
 #!/bin/bash
 
+global_dir="global"
+
 if [ -z "$1" ];then
     echo "Usage: $0 <folder>"
     exit 1
 fi
 
-FOLDER=$1
-
-CONFIG_PATH="$HOME/.config"
-
-if [ ! -d "$FOLDER" ]; then
-    echo "Error: $FOLDER is not a valid directory."
+if [[ "$1" == "$global_dir" || "$1" == "global/" ]]; then
+    echo "Invalid choice: $global_dir"
     exit 1
 fi
 
-for DIR in "$FOLDER"/*; do
-    if [ -d "$DIR" ]; then
-        FULL_PATH=$(realpath $DIR)
-        BASE_DIR=$(basename $FULL_PATH)
-        CONFIG_CONCAT="${CONFIG_PATH}/${BASE_DIR}"
+folder=$1
 
-        if [ -d $CONFIG_CONCAT ]; then
-            echo "Removing folder: $CONFIG_CONCAT"
-            rm -rf $CONFIG_CONCAT
-        fi
+config_path="$HOME/.config"
 
-        echo "Creating link between $FULL_PATH and $CONFIG_CONCAT"
-        ln -sf $FULL_PATH $CONFIG_CONCAT
+if [ ! -d "$folder" ]; then
+    echo "Error: $folder is not a valid directory."
+    exit 1
+fi
+
+remove_first_folder() {
+    new_path=$(echo "$1" | sed 's/^[^\/]*\///')
+    echo "$new_path"
+}
+
+create_directory() {
+    full_path=$(realpath $1)
+    new_path=$(remove_first_folder $1)
+    config_concat="${config_path}/${new_path}"
+
+    echo "$config_concat"
+    if [ -d $config_concat ]; then
+        echo "Directory exists: $config_concat"
+    else
+        echo "Creating directory: $config_concat"
+        mkdir -p $config_concat
+    fi
+}
+
+create_file_symlink() {
+    full_path=$(realpath $1)
+    new_path=$(remove_first_folder $1)
+    config_concat="${config_path}/${new_path}"
+
+    echo "Creating link between $full_path and $config_concat"
+    ln -sf $full_path $config_concat
+}
+
+find "$folder" | while IFS= read item; do
+    if [[ "$item" == "$folder" ]]; then
+        continue
+    elif [[ -d "$item" ]]; then
+        create_directory $item
+    elif [[ -e "$item" ]]; then
+        create_file_symlink $item
     fi
 done
 
+
+echo ""
 echo "Symlinks created sucessfully"
+
