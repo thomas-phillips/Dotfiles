@@ -25,24 +25,34 @@ require('lazy').setup({
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
+  -- [[ Git decorations for buffers ]]
   require 'kickstart/plugins/gitsigns',
 
+  -- [[ Dislays popup with possible keybindings for a command ]]
   require 'kickstart/plugins/which-key',
 
+  -- [[ Extendable fuzzy finder over lists ]]
   require 'kickstart/plugins/telescope',
 
+  -- [[ Collection of LSP configs ]]
   require 'kickstart/plugins/lspconfig',
 
+  -- [[ Formatter ]]
   require 'kickstart/plugins/conform',
 
+  -- [[ Autocompletion ]]
   require 'kickstart/plugins/cmp',
 
+  -- [[ Theme ]]
   require 'kickstart/plugins/tokyonight',
 
+  -- [[ Todo comments - TODO: like this ]]
   require 'kickstart/plugins/todo-comments',
 
+  -- [[ Collection of lua modules ]]
   require 'kickstart/plugins/mini',
 
+  -- [[ File browser ]]
   require 'kickstart/plugins/neo-tree',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
@@ -58,8 +68,6 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
