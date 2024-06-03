@@ -1,1 +1,3 @@
 global/hypr/colours.conf
+global/hypr/hyprlock.conf
+*.bak
