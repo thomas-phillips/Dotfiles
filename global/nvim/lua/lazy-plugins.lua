@@ -43,10 +43,11 @@ require('lazy').setup({
   -- [[ Autocompletion ]]
   require 'kickstart/plugins/cmp',
 
-  -- [[ Theme ]]
-  require 'kickstart/plugins/tokyonight',
+  -- [[ Themes ]]
+  require 'kickstart/plugins/catppuccin-mocha',
+  -- require 'kickstart/plugins/tokyonight',
 
-  -- [[ Todo comments - TODO: like this ]]
+  -- [[ Todo comments ]]
   require 'kickstart/plugins/todo-comments',
 
   -- [[ Collection of lua modules ]]
