@@ -59,6 +59,15 @@ find "$folder" | while IFS= read item; do
     fi
 done
 
+find "$global_dir" | while IFS= read item; do
+    if [[ "$item" == "$folder" ]]; then
+        continue
+    elif [[ -d "$item" ]]; then
+        create_directory $item
+    elif [[ -e "$item" ]]; then
+        create_file_symlink $item
+    fi
+done
 
 echo ""
 echo "Symlinks created sucessfully"
