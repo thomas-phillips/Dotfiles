@@ -163,6 +163,30 @@ return {
         pyright = {},
         bashls = {},
         cssls = {},
+        yamlls = {
+          settings = {
+            yaml = {
+              customTags = {
+                '!And scalar',
+                '!If scalar',
+                '!Not',
+                '!Equals scalar',
+                '!Or scalar',
+                '!FindInMap scalar',
+                '!Base64',
+                '!Cidr',
+                '!Ref',
+                '!Sub',
+                '!GetAtt sequence',
+                '!GetAZs',
+                '!ImportValue sequence',
+                '!Select sequence',
+                '!Split sequence',
+                '!Join sequence',
+              },
+            },
+          },
+        },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
