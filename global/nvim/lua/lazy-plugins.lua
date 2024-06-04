@@ -31,6 +31,9 @@ require('lazy').setup({
   -- [[ Dislays popup with possible keybindings for a command ]]
   require 'kickstart/plugins/which-key',
 
+  -- [[ Dislays popup with possible keybindings for a command ]]
+  require 'kickstart/plugins/treesitter',
+
   -- [[ Extendable fuzzy finder over lists ]]
   require 'kickstart/plugins/telescope',
 
@@ -60,7 +63,7 @@ require('lazy').setup({
   require 'kickstart/plugins/vim-tmux-navigator',
 
   -- [[ Buffer tabs ]]
-  -- require 'kickstart/plugins/bufferline',
+  require 'kickstart/plugins/bufferline',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
