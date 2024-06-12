@@ -66,3 +66,5 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 
 vim.opt.termguicolors = true
+
+vim.opt.conceallevel = 2
