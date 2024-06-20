@@ -211,6 +211,40 @@ return {
             },
           },
         },
+        texlab = {
+          settings = {
+            texlab = {
+              auxDirectory = '.',
+              bibtexFormatter = 'texlab',
+              build = {
+                args = { '-pdf', '-interaction=nonstopmode', '-synctex=1', '%f' },
+                executable = 'latexmk',
+                forwardSearchAfter = false,
+                onSave = false,
+              },
+              chktex = {
+                onEdit = false,
+                onOpenAndSave = false,
+              },
+              diagnosticsDelay = 300,
+              formatterLineLength = 80,
+              forwardSearch = {
+                args = {},
+              },
+              latexFormatter = 'latexindent',
+              latexindent = {
+                modifyLineBreaks = false,
+              },
+            },
+          },
+        },
+        ltex = {
+          settings = {
+            ltex = {
+              language = 'en-AU',
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -227,6 +261,7 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'black',
+        'clang-format',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

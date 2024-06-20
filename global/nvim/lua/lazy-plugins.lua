@@ -62,11 +62,20 @@ require('lazy').setup({
   -- [[ Tmux support ]]
   require 'kickstart/plugins/vim-tmux-navigator',
 
-  -- [[ Buffer tabs ]]
-  require 'kickstart/plugins/bufferline',
+  -- [[ Lualine ]]
+  require 'kickstart/plugins/lualine',
 
-  -- [[ Obsidian ]]
-  require 'kickstart/plugins/obsidian',
+  -- [[ Indent line ]]
+  require 'kickstart/plugins/indent_line',
+
+  -- [[ Indent line ]]
+  require 'kickstart/plugins/autopairs',
+
+  -- [[ VimTex ]]
+  require 'kickstart/plugins/vimtex',
+
+  -- [[ Markdown Preview ]]
+  require 'kickstart/plugins/markdown_preview',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -78,9 +87,7 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

@@ -10,6 +10,14 @@ return {
           light = 'latte',
           dark = 'mocha',
         },
+        integrations = {
+          cmp = true,
+          gitsigns = true,
+          treesitter = true,
+          mini = {
+            enabled = true,
+          },
+        },
       }
       vim.cmd.colorscheme 'catppuccin'
     end,
