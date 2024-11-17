@@ -1,0 +1,70 @@
+@import "./mocha.css";
+
+* {
+    all: unset;
+    font-family: Hack;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: @text;
+}
+
+window#waybar {
+    background-color: @crust;
+}
+
+#custom-playerctl,
+#workspaces button,
+#clock,
+#battery,
+#memory,
+#cpu,
+#network,
+#tray,
+#custom-logo,
+#pulseaudio.muted,
+#pulseaudio {
+    border-radius: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 3px;
+    font-size: 15px;
+    background-color: @mantle;
+    color: @text;
+}
+
+#custom-logo {
+    margin-left: 7px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+#workspaces {
+    background: @crust;
+    padding: 0px 10px 0px 5px;
+    border-radius: 0px 16px 16px 0px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#workspaces button {
+    padding-top: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 6px;
+}
+
+#workspaces button:hover,
+#workspaces button.active {
+    border-radius: 7px;
+    color: @base;
+    background-color: @subtext1;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
