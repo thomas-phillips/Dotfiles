@@ -1,3 +1,5 @@
 global/hypr/colours.conf
 global/hypr/hyprlock.conf
 *.bak
+
+dotfiles/tmux/plugins
