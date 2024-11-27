@@ -87,8 +87,8 @@ return {
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
-      vim.keymap.set('n', '<leader>ld', builtin.lsp_implementations, { desc = 'Search LSP Document Symbols' })
-      vim.keymap.set('n', '<leader>lw', builtin.lsp_implementations, { desc = 'Search LSP Workplace Symbols' })
+      vim.keymap.set('n', '<leader>ld', builtin.lsp_document_symbols, { desc = 'Search LSP Document Symbols' })
+      vim.keymap.set('n', '<leader>lw', builtin.lsp_workspace_symbols, { desc = 'Search LSP Workspace Symbols' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
