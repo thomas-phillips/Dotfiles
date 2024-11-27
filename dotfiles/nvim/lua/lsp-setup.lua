@@ -79,6 +79,8 @@ local servers = {
 			},
 		},
 	},
+	ts_ls = {},
+	bashls = {},
 }
 
 -- → Lua.format.enable                   default: true
@@ -86,6 +88,7 @@ local linters_formatters = {
 	"stylua",
 	"black",
 	"pylint",
+	"shfmt",
 }
 
 require("mason").setup({})
