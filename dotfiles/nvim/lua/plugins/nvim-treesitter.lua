@@ -31,6 +31,7 @@ return {
 				"xml",
 				"yaml",
 				"java",
+				"dockerfile",
 			},
 			sync_install = false,
 			highlight = { enable = true },
