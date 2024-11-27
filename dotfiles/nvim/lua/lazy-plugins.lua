@@ -18,4 +18,5 @@ return {
 	require("plugins/lazygit"),
 	require("plugins/nvim-surround"),
 	require("plugins/nvim-lint"),
+	require("plugins/bigfile"),
 }
