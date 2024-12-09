@@ -22,4 +22,5 @@ return {
 	require("plugins/yazi"),
 	require("plugins/harpoon"),
 	require("plugins/leap"),
+	require("plugins/treesj"),
 }
