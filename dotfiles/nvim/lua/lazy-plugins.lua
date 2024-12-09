@@ -19,4 +19,5 @@ return {
 	require("plugins/nvim-surround"),
 	require("plugins/nvim-lint"),
 	require("plugins/bigfile"),
+	require("plugins/yazi"),
 }
