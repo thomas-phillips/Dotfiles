@@ -20,4 +20,5 @@ return {
 	require("plugins/nvim-lint"),
 	require("plugins/bigfile"),
 	require("plugins/yazi"),
+	require("plugins/harpoon"),
 }
