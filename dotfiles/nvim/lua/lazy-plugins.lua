@@ -4,9 +4,9 @@ return {
 
 	{ "numToStr/Comment.nvim", opts = {} },
 
+	require("plugins/which-key"),
 	require("plugins/neo-tree"),
 	require("plugins/telescope"),
-	require("plugins/which-key"),
 	require("plugins/catppucian-mocha"),
 	require("plugins/vim-tmux-navigator"),
 	require("plugins/autopairs"),
@@ -23,4 +23,5 @@ return {
 	require("plugins/harpoon"),
 	require("plugins/leap"),
 	require("plugins/treesj"),
+	require("plugins/obsidian"),
 }
