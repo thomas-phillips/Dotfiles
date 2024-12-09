@@ -79,8 +79,12 @@ local servers = {
 			},
 		},
 	},
-	ts_ls = {},
+	ts_ls = {
+		filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+	},
 	bashls = {},
+	dockerls = {},
+	docker_compose_language_service = {},
 }
 
 -- → Lua.format.enable                   default: true
