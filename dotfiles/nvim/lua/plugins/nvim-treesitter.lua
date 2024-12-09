@@ -32,6 +32,7 @@ return {
 				"yaml",
 				"java",
 				"dockerfile",
+				"typescript",
 			},
 			sync_install = false,
 			highlight = { enable = true },
