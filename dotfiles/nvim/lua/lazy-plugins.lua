@@ -21,4 +21,5 @@ return {
 	require("plugins/bigfile"),
 	require("plugins/yazi"),
 	require("plugins/harpoon"),
+	require("plugins/leap"),
 }
