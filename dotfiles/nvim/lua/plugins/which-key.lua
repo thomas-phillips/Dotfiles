@@ -17,7 +17,7 @@ return {
 				},
 				{ "<leader>h", group = "[H]arpoon" },
 				{ "<leader>y", group = "[Y]azi" },
-				{ "<leader>g", group = "[G]itsigns" },
+				{ "<leader>g", group = "[G]it" },
 				{ "<leader>gt", group = "[G]itsigns [t]oggle" },
 				{ "<leader>t", group = "[T]reeSJ" },
 				-- Visual Mode
