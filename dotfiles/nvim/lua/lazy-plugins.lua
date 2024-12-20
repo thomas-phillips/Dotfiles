@@ -23,5 +23,4 @@ return {
 	require("plugins/harpoon"),
 	require("plugins/leap"),
 	require("plugins/treesj"),
-	require("plugins/obsidian"),
 }
