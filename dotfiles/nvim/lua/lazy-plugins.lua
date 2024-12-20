@@ -21,6 +21,10 @@ return {
 	require("plugins/bigfile"),
 	require("plugins/yazi"),
 	require("plugins/harpoon"),
-	require("plugins/leap"),
 	require("plugins/treesj"),
+	require("plugins/gitlab"),
+	require("plugins/diffview"),
+	require("plugins/no-neck-pain"),
+	require("plugins/leap"),
+	require("plugins/mintabline")
 }
