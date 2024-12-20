@@ -85,6 +85,8 @@ local servers = {
 	bashls = {},
 	dockerls = {},
 	docker_compose_language_service = {},
+	yamlls = {},
+	gopls = {},
 }
 
 -- → Lua.format.enable                   default: true

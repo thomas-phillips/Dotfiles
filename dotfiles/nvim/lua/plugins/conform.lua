@@ -20,6 +20,7 @@ return {
 			python = { "black" },
 			bash = { "shfmt" },
 			sh = { "shfmt" },
+			go = { "gofmt" },
 		},
 	},
 }

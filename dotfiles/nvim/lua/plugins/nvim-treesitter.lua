@@ -33,6 +33,7 @@ return {
 				"java",
 				"dockerfile",
 				"typescript",
+				"go",
 			},
 			sync_install = false,
 			highlight = { enable = true },
