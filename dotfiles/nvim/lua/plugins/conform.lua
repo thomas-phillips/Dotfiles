@@ -21,6 +21,9 @@ return {
 			bash = { "shfmt" },
 			sh = { "shfmt" },
 			go = { "gofmt" },
+			rust = { "rustfmt", lsp_format = "fallback" },
+			json = { "jq" },
+			yaml = { "yq" },
 		},
 	},
 }

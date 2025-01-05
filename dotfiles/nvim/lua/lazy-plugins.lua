@@ -26,5 +26,8 @@ return {
 	require("plugins/diffview"),
 	require("plugins/no-neck-pain"),
 	require("plugins/leap"),
-	require("plugins/mintabline")
+	require("plugins/mintabline"),
+	require("plugins/windows"),
+	require("plugins/render-markdown"),
+	require("plugins/markdown-preview"),
 }

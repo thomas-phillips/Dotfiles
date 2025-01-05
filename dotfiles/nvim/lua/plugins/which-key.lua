@@ -20,6 +20,7 @@ return {
 				{ "<leader>g", group = "[G]it" },
 				{ "<leader>gt", group = "[G]itsigns [t]oggle" },
 				{ "<leader>t", group = "[T]reeSJ" },
+				{ "<leader>w", group = "[W]indow" },
 				-- Visual Mode
 				{ "<leader>g", group = "Git [H]unk", mode = "v" },
 			})

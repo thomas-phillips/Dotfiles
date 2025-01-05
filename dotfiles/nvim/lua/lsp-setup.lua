@@ -27,6 +27,7 @@ require("lsp-zero").extend_lspconfig({
 })
 
 local cmp = require("cmp")
+-- require("luasnip.loaders.from_vscode").lazy_load({paths = "./snippets"})
 
 cmp.setup({
 	sources = {
@@ -41,7 +42,7 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({}),
 })
 
-local on_attach = function(client, bufnr)
+local on_attach = function(client, _)
 	-- Disable formatting capabilities
 	client.server_capabilities.documentFormattingProvider = false
 	client.server_capabilities.documentRangeFormattingProvider = false
@@ -54,6 +55,9 @@ local servers = {
 			Lua = {
 				format = {
 					enable = false,
+				},
+				diagnostics = {
+					globals = { "vim" },
 				},
 			},
 		},
@@ -86,7 +90,9 @@ local servers = {
 	dockerls = {},
 	docker_compose_language_service = {},
 	yamlls = {},
+	jsonls = {},
 	gopls = {},
+	rust_analyzer = {},
 }
 
 -- → Lua.format.enable                   default: true
@@ -114,6 +120,7 @@ require("mason-lspconfig").setup({
 })
 
 local luasnip = require("luasnip")
+
 cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
@@ -146,15 +153,16 @@ cmp.setup({
 		--  This will expand snippets if the LSP sent a snippet.
 		["<C-y>"] = cmp.mapping.confirm({ select = true }),
 
-		-- If you prefer more traditional completion keymaps,
-		-- you can uncomment the following lines
-		--['<CR>'] = cmp.mapping.confirm { select = true },
-		--['<Tab>'] = cmp.mapping.select_next_item(),
-		--['<S-Tab>'] = cmp.mapping.select_prev_item(),
+		["<C-i>"] = cmp.mapping(function(fallback)
+			if luasnip.locally_jumpable(1) then
+				luasnip.jump(1)
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
 
 		-- Manually trigger a completion from nvim-cmp.
 		--  Generally you don't need this, because nvim-cmp will display
-		--  completions whenever it has completion options available.
 		["<C-Space>"] = cmp.mapping.complete({}),
 	}),
 })

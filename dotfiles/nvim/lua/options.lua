@@ -73,3 +73,8 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
+
+-- For windows.nvim plugin
+vim.o.winwidth = 20
+vim.o.winminwidth = 10
+vim.o.equalalways = false
