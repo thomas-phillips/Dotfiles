@@ -13,8 +13,8 @@ fi
 for item in "$SOURCE_DIR"/*; do
     name=$(basename "$item")
 
+    rm -rf "$TARGET_DIR/$name"
     ln -sf "$item" "$TARGET_DIR/$name"
 
     echo "Symlink created: $TARGET_DIR/$name -> $item"
 done
-

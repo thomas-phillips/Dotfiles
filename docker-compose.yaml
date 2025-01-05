@@ -1,0 +1,9 @@
+services:
+  arch:
+    build:
+      context: .
+      dockerfile: arch.Dockerfile
+  ubuntu:
+    build:
+      context: .
+      dockerfile: ubuntu.Dockerfile
