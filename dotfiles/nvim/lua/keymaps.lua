@@ -31,6 +31,9 @@ vim.keymap.set("n", "<C-v>", '"+p', { noremap = true, silent = true })
 vim.keymap.set("i", "<C-v>", "<C-R>+", { noremap = true, silent = true })
 vim.keymap.set("v", "<C-v>", '"+p', { noremap = true, silent = true })
 
+-- Comment line
+-- vim.keymap.set("v", "<C-/>", "gc")
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
