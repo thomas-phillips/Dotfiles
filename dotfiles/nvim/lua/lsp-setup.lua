@@ -93,6 +93,8 @@ local servers = {
 	jsonls = {},
 	gopls = {},
 	rust_analyzer = {},
+	marksman = {},
+	solargraph = {},
 }
 
 -- → Lua.format.enable                   default: true
@@ -101,6 +103,10 @@ local linters_formatters = {
 	"black",
 	"pylint",
 	"shfmt",
+	"prettier",
+	"eslint_d",
+	"yamlfmt",
+	"rubocop",
 }
 
 require("mason").setup({})

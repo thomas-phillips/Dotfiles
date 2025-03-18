@@ -23,7 +23,9 @@ return {
 			go = { "gofmt" },
 			rust = { "rustfmt", lsp_format = "fallback" },
 			json = { "jq" },
-			yaml = { "yq" },
+			yaml = { "prettier" },
+			typescript = { "prettier" },
+			ruby = { "rubocop" },
 		},
 	},
 }
