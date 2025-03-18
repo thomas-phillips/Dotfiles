@@ -28,5 +28,6 @@ return {
 	require("plugins/windows"),
 	require("plugins/render-markdown"),
 	require("plugins/markdown-preview"),
+	require("plugins/silicon"),
 	require("plugins/git-conflict"),
 }
