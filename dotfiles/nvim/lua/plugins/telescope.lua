@@ -5,6 +5,7 @@ return {
 		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
+			"debugloop/telescope-undo.nvim",
 			{ -- If encountering errors, see telescope-fzf-native README for installation instructions
 				"nvim-telescope/telescope-fzf-native.nvim",
 
@@ -35,6 +36,7 @@ return {
 			-- Enable Telescope extensions if they are installed
 			pcall(require("telescope").load_extension, "fzf")
 			pcall(require("telescope").load_extension, "ui-select")
+			pcall(require("telescope").load_extension, "undo")
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
@@ -48,10 +50,21 @@ return {
 			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 			vim.keymap.set("n", "<leader>si", builtin.lsp_implementations, { desc = "[S]earch [I]mplementations" })
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+			vim.keymap.set("n", "<leader>su", "<cmd>Telescope undo<cr>", { desc = "[S]earch [U]ndo" })
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
-			vim.keymap.set("n", "<leader>sld", builtin.lsp_document_symbols, { desc = "[S]earch [L]SP [D]ocument Symbols" })
-			vim.keymap.set("n", "<leader>slw", builtin.lsp_workspace_symbols, { desc = "[S]earch [L]SP [W]orkspace Symbols" })
+			vim.keymap.set(
+				"n",
+				"<leader>sld",
+				builtin.lsp_document_symbols,
+				{ desc = "[S]earch [L]SP [D]ocument Symbols" }
+			)
+			vim.keymap.set(
+				"n",
+				"<leader>slw",
+				builtin.lsp_workspace_symbols,
+				{ desc = "[S]earch [L]SP [W]orkspace Symbols" }
+			)
 			vim.keymap.set("n", "<leader>slr", builtin.lsp_references, { desc = "[S]earch [L]SP [R]eferences" })
 
 			-- Slightly advanced example of overriding default behavior and theme
