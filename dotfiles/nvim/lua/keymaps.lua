@@ -26,10 +26,20 @@ vim.keymap.set("v", "<leader>'", '"+', { noremap = true })
 vim.keymap.set("n", "<C-c>", '"+y', { noremap = true, silent = true })
 vim.keymap.set("v", "<C-c>", '"+y', { noremap = true, silent = true })
 
--- Yank to system clipboard
-vim.keymap.set("n", "<C-v>", '"+p', { noremap = true, silent = true })
-vim.keymap.set("i", "<C-v>", "<C-R>+", { noremap = true, silent = true })
-vim.keymap.set("v", "<C-v>", '"+p', { noremap = true, silent = true })
+-- Paste from system clipboard
+-- vim.keymap.set("n", "<C-v>", '"+p', { noremap = true, silent = true })
+-- vim.keymap.set("i", "<C-v>", "<C-R>+", { noremap = true, silent = true })
+-- vim.keymap.set("v", "<C-v>", '"+p', { noremap = true, silent = true })
+
+-- Remove ^M from buffer
+vim.keymap.set("n", "<leader>F", function()
+	local ok, _ = pcall(function()
+		vim.cmd("%s/\r//g")
+	end)
+	if not ok then
+		print("Pattern not found: \r")
+	end
+end, { noremap = true, silent = true, desc = "Remove \r from buffer" })
 
 -- Comment line
 -- vim.keymap.set("v", "<C-/>", "gc")
