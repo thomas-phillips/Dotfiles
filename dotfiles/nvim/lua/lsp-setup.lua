@@ -95,6 +95,7 @@ local servers = {
 	rust_analyzer = {},
 	marksman = {},
 	solargraph = {},
+	hadolint = {},
 }
 
 -- → Lua.format.enable                   default: true
