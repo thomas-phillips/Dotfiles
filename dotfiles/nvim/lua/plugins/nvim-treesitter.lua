@@ -37,6 +37,7 @@ return {
 				"go",
 				"rust",
 				"toml",
+				"just",
 			},
 			sync_install = false,
 			highlight = { enable = true },

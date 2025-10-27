@@ -24,9 +24,10 @@ return {
 				go = { "gofmt" },
 				rust = { "rustfmt", lsp_format = "fallback" },
 				json = { "jq" },
-				yaml = { "prettier" },
+				yaml = { "yamlfmt_fix" },
 				typescript = { "prettier" },
 				ruby = { "rubocop" },
+				sql = { "pg_format_fix" },
 			},
 			formatters = {
 				black_venv = {
@@ -34,6 +35,18 @@ return {
 					args = { "--stdin-filename", "$FILENAME", "--quiet", "-" },
 					cwd = require("conform.util").root_file({ "pyproject.toml" }),
 					require_cwd = true,
+				},
+				pg_format_fix = {
+					command = "pg_format",
+					args = { "--function-case", "2", "--type-case", "2", "--keyword-case", "2", "-" },
+				},
+				yamlfmt_fix = {
+					command = "/home/thomas/go/bin/yamlfmt",
+					args = {
+						"--formatter",
+						"retain_line_breaks_single=true,scan_folded_as_literal=true,drop_merge_tag=true",
+						"-",
+					},
 				},
 			},
 		})

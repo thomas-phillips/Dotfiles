@@ -7,10 +7,10 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagn
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Disable arrow keys in normal mode
-vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
+-- vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
+-- vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
+-- vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
+-- vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 -- Keybinds to make split navigation easier.
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
@@ -19,12 +19,16 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- Use system clipboard
-vim.keymap.set("n", "<leader>'", '"+', { noremap = true })
-vim.keymap.set("v", "<leader>'", '"+', { noremap = true })
+-- vim.keymap.set("n", "<leader>'", '"+', { noremap = true })
+-- vim.keymap.set("v", "<leader>'", '"+', { noremap = true })
 
 -- Yank to system clipboard
 vim.keymap.set("n", "<C-c>", '"+y', { noremap = true, silent = true })
 vim.keymap.set("v", "<C-c>", '"+y', { noremap = true, silent = true })
+
+-- Keep highlight after indenting
+vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 
 -- Paste from system clipboard
 -- vim.keymap.set("n", "<C-v>", '"+p', { noremap = true, silent = true })

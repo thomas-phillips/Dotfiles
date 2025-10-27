@@ -91,11 +91,18 @@ local servers = {
 	docker_compose_language_service = {},
 	yamlls = {},
 	jsonls = {},
+	just = {},
 	gopls = {},
 	rust_analyzer = {},
 	marksman = {},
 	solargraph = {},
 	hadolint = {},
+	sqlls = {
+		filetypes = { "sql" },
+	},
+	-- postgrestools = {
+	-- 	filetypes = { "sql" },
+	-- },
 }
 
 -- → Lua.format.enable                   default: true
@@ -108,6 +115,7 @@ local linters_formatters = {
 	"eslint_d",
 	"yamlfmt",
 	"rubocop",
+	"pgformatter",
 }
 
 require("mason").setup({})

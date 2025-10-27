@@ -30,4 +30,7 @@ return {
 	require("plugins/markdown-preview"),
 	require("plugins/silicon"),
 	require("plugins/git-conflict"),
+	require("plugins/remote-nvim"),
+	require("plugins/undotree"),
+	-- require("plugins/gitlab"),
 }
